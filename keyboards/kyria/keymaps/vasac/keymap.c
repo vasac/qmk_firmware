@@ -53,17 +53,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
      * |Ctrl/ESC|   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ' "   |
      * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
-     * | LShift |   Z  |   X  |   C  |   V  |   B  | Space|LShift|  |  [   |  ]   |   N  |   M  | ,  < | . >  | /  ? |  | \   |
+     * | LShift |   Z  |   X  |   C  |   V  |   B  | Raise|LShift|  |  [   |  ]   |   N  |   M  | ,  < | . >  | /  ? |  | \   |
      * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
-     *                        | Tab  | Alt  | GUI  | Tab  | Esc  |  | Enter| Space|      |  - _ | = +  |
-     *                        |      |      |      | Lower| Raise|  | Lower|RShift| Raise|      |      |
+     *                        | Tab  | Alt  | GUI  | Tab  |      |  | Enter| Space|  - _ |  - _ | = +  |
+     *                        |      |      |      | Lower| Enter|  | Lower|RShift| Raise|      |      |
      *                        `----------------------------------'  `----------------------------------'
      */
     [_QWERTY] = LAYOUT(
                        KC_GRAVE,    KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
                        MT(MOD_LCTL, KC_ESC),   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-                       KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_SPC,   KC_LSFT, KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
-                       KC_TAB, KC_LALT, KC_LGUI, LT(_LOWER, KC_TAB), LT(_RAISE, KC_ESC), LT(_LOWER, KC_ENT), RSFT_T(KC_SPC), MO(_RAISE),  KC_MINS, KC_EQL
+                       KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   MO(_RAISE),   KC_LSFT, KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
+                       MO(_WINDOW), KC_LALT, KC_LGUI, LT(_LOWER, KC_TAB), KC_ENT, LT(_LOWER, KC_ENT), RSFT_T(KC_SPC), LT(_RAISE, KC_MINS),  KC_MINS, KC_EQL
                        ),
 
     /*
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
      * |        |      |      |      | Mute | VolDn|      |      |  |      |      | MLeft| Mdown| MUp  |MRight| Home | End    |
      * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
-     *                        |      |      |      |      |      |  |      |      | MClk1|      |      |
+     *                        |      |      |      |      |      |  |      |      |      | MClk1| MClk2|
      *                        |      |      |      |      |      |  |      |      |      |      |      |
      *                        `----------------------------------'  `----------------------------------'
      */
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
                       _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PGUP, KC_PGDN,
                       _______, _______, _______, _______, KC_MUTE, KC_VOLD, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_HOME, KC_END,
-                      _______, _______, _______, _______, _______, _______, _______, KC_BTN1, KC_BTN2, _______
+                      _______, _______, _______, _______, _______, _______, _______, _______, KC_BTN1, KC_BTN2
                       ),
     /*
      * Adjust Layer: Function keys, RGB
