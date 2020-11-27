@@ -144,10 +144,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *                        `----------------------------------'  `----------------------------------'
      */
         [_WINDOW] = LAYOUT(
-                           _______, _______, _______, _______, _______, _______,                    LCTL(LGUI(KC_LEFT)), _______, _______, LCTL(LGUI(KC_RIGHT)), _______, _______,
-          _______, _______, _______, _______, LCTL(LGUI(LALT(KC_F))), _______,                      LCTL(LGUI(LALT(KC_LEFT))), LCTL(LGUI(LALT(KC_DOWN))), LCTL(LGUI(LALT(KC_UP))), LCTL(LGUI(LALT(KC_RIGHT))), _______, _______,
-                           _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, LCTL(LGUI(LSFT(KC_LEFT))), _______, _______, LCTL(LGUI(LSFT(KC_RIGHT))), _______, _______,
-                                     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+                           _______, _______, _______, _______, LCTL(LGUI(LALT(KC_R))), _______,                    LCTL(LGUI(KC_LEFT)), _______, _______, LCTL(LGUI(KC_RIGHT)), _______, _______,
+         _______, _______, _______, _______, LCTL(LGUI(LALT(KC_F))), _______,                      LCTL(LGUI(LALT(KC_LEFT))), LCTL(LGUI(LALT(KC_DOWN))), LCTL(LGUI(LALT(KC_UP))), LCTL(LGUI(LALT(KC_RIGHT))), _______, _______,
+         _______, LCTL(LGUI(LALT(KC_Z))), _______, LCTL(LGUI(LALT(KC_C))), _______, _______, _______, _______, _______, _______, LCTL(LGUI(LSFT(KC_LEFT))), _______, _______, LCTL(LGUI(LSFT(KC_RIGHT))), _______, _______,
+                           _______, _______, _______, _______, _______, _______, _______, LCTL(LGUI(LALT(KC_MINUS))), LCTL(LGUI(LALT(KC_PLUS))), _______
         ),
 
 
