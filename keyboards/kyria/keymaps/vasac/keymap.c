@@ -54,16 +54,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
      * |Ctrl/ESC|   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ' "   |
      * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
-     * | LShift |   Z  |   X  |   C  |   V  |   B  | Raise|LShift|  |  [   |  ]   |   N  |   M  | ,  < | . >  | /  ? |  | \   |
+     * | LShift |   Z  |   X  |   C  |   V  |   B  |      |      |  |  [   |  ]   |   N  |   M  | ,  < | . >  | /  ? |  | \   |
      * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
      *                        | _WIN | Alt  | GUI  | Tab  |      |  |      | Space|  - _ |  = + |      |
      *                        |      |      |      | Lower| Raise|  | Enter|RShift| Lower| Raise|      |
      *                        `----------------------------------'  `----------------------------------'
      */
     [_QWERTY] = LAYOUT(
-                       KC_GRAVE,    KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-                       MT(MOD_LCTL, KC_ESC),   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-                       KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   MO(_RAISE),   KC_LSFT, KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
+                       KC_GRAVE,    KC_Q,   KC_W,   KC_E,   KC_R,  KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
+                       MT(MOD_LCTL, KC_ESC), KC_A,   KC_S,   KC_D, KC_F,   KC_G,                                 KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+                       KC_LSFT, KC_Z,  KC_X, KC_C,   KC_V,   KC_B, _______, _______,           KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
                        MO(_WINDOW), KC_LALT, KC_LGUI, LT(_LOWER, KC_TAB), MO(_RAISE), KC_ENT, RSFT_T(KC_SPC), LT(_LOWER, KC_MINS),  LT(_RAISE, KC_EQL), _______
                        ),
 
